@@ -100,10 +100,23 @@ const Grid = () => {
     }
   };
 
+  const RandomizeBoxOrder = () => {
+    const GridContainer = document.querySelector(".GridContainer");
+    const GridContainerChildren = GridContainer.childNodes;
+    //Select all boxes from DOM and generate 2 randoms between 0 and 8 (8 is amount of different boxes)//
+    for (let i = 0; i < GridContainerChildren.length; i++) {
+      let target =
+        Math.floor(Math.random() * GridContainerChildren.length - 1) + 1;
+      let target2 =
+        Math.floor(Math.random() * GridContainerChildren.length - 1) + 1;
+      GridContainerChildren[target].before(GridContainerChildren[target2]); //select random element among elements and position it before other random element//
+    }
+  };
+
   return (
     <div className="Container">
       <div className="counter">Score: {Count}</div>
-      <div className="GridContainer">
+      <div className="GridContainer" onClick={RandomizeBoxOrder}>
         <div className="Box1" data-value="1" onClick={HandleBox1Click}>
           1
         </div>
