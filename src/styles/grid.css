@@ -18,3 +18,8 @@
   font-size: 35px;
   font-weight: bold;
 }
+
+.ResetGame {
+  display: none;
+  justify-content: center;
+}
