@@ -162,10 +162,7 @@ const Grid = () => {
   }, [Count]);
 
   const ResetGame = () => {
-    const GridContainer = document.querySelector(".GridContainer");
-    const ResetGameContainer = document.querySelector(".ResetGameContainer");
-    GridContainer.style.display = "grid";
-    ResetGameContainer.style.display = "none";
+    window.location.reload();
   };
 
   return (
