@@ -16,7 +16,7 @@ const Grid = () => {
   const HandleBox1Click = (e) => {
     const target = e.currentTarget;
     const GridContainer = document.querySelector(".GridContainer");
-    const ResetGame = document.querySelector(".ResetGame");
+    const ResetGameContainer = document.querySelector(".ResetGameContainer");
     setCount((Count += 1));
     setBox1Count((Box1Count += 1));
     if (target.classList.contains("Box1") && Box1Count >= 2 && Count >= 2) {
@@ -24,14 +24,14 @@ const Grid = () => {
       setCount((Count = 0));
       console.log("this has been clicked twice");
       GridContainer.style.display = "none";
-      ResetGame.style.display = "flex";
+      ResetGameContainer.style.display = "flex";
     }
   };
 
   const HandleBox2Click = (e) => {
     const target = e.currentTarget;
     const GridContainer = document.querySelector(".GridContainer");
-    const ResetGame = document.querySelector(".ResetGame");
+    const ResetGameContainer = document.querySelector(".ResetGameContainer");
     setCount((Count += 1));
     setBox2Count((Box2Count += 1));
     if (target.classList.contains("Box2") && Box2Count >= 2 && Count >= 2) {
@@ -39,14 +39,14 @@ const Grid = () => {
       setCount((Count = 0));
       console.log("this has been clicked twice");
       GridContainer.style.display = "none";
-      ResetGame.style.display = "flex";
+      ResetGameContainer.style.display = "flex";
     }
   };
 
   const HandleBox3Click = (e) => {
     const target = e.currentTarget;
     const GridContainer = document.querySelector(".GridContainer");
-    const ResetGame = document.querySelector(".ResetGame");
+    const ResetGameContainer = document.querySelector(".ResetGameContainer");
     setCount((Count += 1));
     setBox3Count((Box3Count += 1));
     if (target.classList.contains("Box3") && Box3Count >= 2 && Count >= 2) {
@@ -54,14 +54,14 @@ const Grid = () => {
       setCount((Count = 0));
       console.log("this has been clicked twice");
       GridContainer.style.display = "none";
-      ResetGame.style.display = "flex";
+      ResetGameContainer.style.display = "flex";
     }
   };
 
   const HandleBox4Click = (e) => {
     const target = e.currentTarget;
     const GridContainer = document.querySelector(".GridContainer");
-    const ResetGame = document.querySelector(".ResetGame");
+    const ResetGameContainer = document.querySelector(".ResetGameContainer");
     setCount((Count += 1));
     setBox4Count((Box4Count += 1));
     if (target.classList.contains("Box4") && Box4Count >= 2 && Count >= 2) {
@@ -69,14 +69,14 @@ const Grid = () => {
       setCount((Count = 0));
       console.log("this has been clicked twice");
       GridContainer.style.display = "none";
-      ResetGame.style.display = "flex";
+      ResetGameContainer.style.display = "flex";
     }
   };
 
   const HandleBox5Click = (e) => {
     const target = e.currentTarget;
     const GridContainer = document.querySelector(".GridContainer");
-    const ResetGame = document.querySelector(".ResetGame");
+    const ResetGameContainer = document.querySelector(".ResetGameContainer");
     setCount((Count += 1));
     setBox5Count((Box5Count += 1));
     if (target.classList.contains("Box5") && Box5Count >= 2 && Count >= 2) {
@@ -84,14 +84,14 @@ const Grid = () => {
       setCount((Count = 0));
       console.log("this has been clicked twice");
       GridContainer.style.display = "none";
-      ResetGame.style.display = "flex";
+      ResetGameContainer.style.display = "flex";
     }
   };
 
   const HandleBox6Click = (e) => {
     const target = e.currentTarget;
     const GridContainer = document.querySelector(".GridContainer");
-    const ResetGame = document.querySelector(".ResetGame");
+    const ResetGameContainer = document.querySelector(".ResetGameContainer");
     setCount((Count += 1));
     setBox6Count((Box6Count += 1));
     if (target.classList.contains("Box6") && Box6Count >= 2 && Count >= 2) {
@@ -99,14 +99,14 @@ const Grid = () => {
       setCount((Count = 0));
       console.log("this has been clicked twice");
       GridContainer.style.display = "none";
-      ResetGame.style.display = "flex";
+      ResetGameContainer.style.display = "flex";
     }
   };
 
   const HandleBox7Click = (e) => {
     const target = e.currentTarget;
     const GridContainer = document.querySelector(".GridContainer");
-    const ResetGame = document.querySelector(".ResetGame");
+    const ResetGameContainer = document.querySelector(".ResetGameContainer");
     setCount((Count += 1));
     setBox7Count((Box7Count += 1));
     if (target.classList.contains("Box7") && Box7Count >= 2 && Count >= 2) {
@@ -114,14 +114,14 @@ const Grid = () => {
       setCount((Count = 0));
       console.log("this has been clicked twice");
       GridContainer.style.display = "none";
-      ResetGame.style.display = "flex";
+      ResetGameContainer.style.display = "flex";
     }
   };
 
   const HandleBox8Click = (e) => {
     const target = e.currentTarget;
     const GridContainer = document.querySelector(".GridContainer");
-    const ResetGame = document.querySelector(".ResetGame");
+    const ResetGameContainer = document.querySelector(".ResetGameContainer");
     setCount((Count += 1));
     setBox8Count((Box8Count += 1));
     if (target.classList.contains("Box8") && Box8Count >= 2 && Count >= 2) {
@@ -129,7 +129,7 @@ const Grid = () => {
       setCount((Count = 0));
       console.log("this has been clicked twice");
       GridContainer.style.display = "none";
-      ResetGame.style.display = "flex";
+      ResetGameContainer.style.display = "flex";
     }
   };
 
@@ -161,11 +161,18 @@ const Grid = () => {
     }
   }, [Count]);
 
+  const ResetGame = () => {
+    const GridContainer = document.querySelector(".GridContainer");
+    const ResetGameContainer = document.querySelector(".ResetGameContainer");
+    GridContainer.style.display = "grid";
+    ResetGameContainer.style.display = "none";
+  };
+
   return (
     <div className="Container">
       <div className="counter">Score: {Count}</div>
-      <div className="ResetGame">
-        Best Score: {BestScore.current}
+      <div className="ResetGameContainer" onClick={ResetGame}>
+        Score Of Last Round: {BestScore.current}
         <button className="ResetButton">Reset Game?</button>
       </div>
       <div className="GridContainer" onClick={RandomizeBoxOrder}>
