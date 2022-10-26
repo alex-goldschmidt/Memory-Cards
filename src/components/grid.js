@@ -17,6 +17,7 @@ const Grid = () => {
     const target = e.currentTarget;
     const GridContainer = document.querySelector(".GridContainer");
     const ResetGameContainer = document.querySelector(".ResetGameContainer");
+    const counterDiv = document.querySelector(".counterDiv");
     setCount((Count += 1));
     setBox1Count((Box1Count += 1));
     if (target.classList.contains("Box1") && Box1Count >= 2 && Count >= 2) {
@@ -24,7 +25,8 @@ const Grid = () => {
       setCount((Count = 0));
       console.log("this has been clicked twice");
       GridContainer.style.display = "none";
-      ResetGameContainer.style.display = "flex";
+      ResetGameContainer.style.display = "grid";
+      counterDiv.style.display = "none";
     }
   };
 
@@ -32,6 +34,7 @@ const Grid = () => {
     const target = e.currentTarget;
     const GridContainer = document.querySelector(".GridContainer");
     const ResetGameContainer = document.querySelector(".ResetGameContainer");
+    const counterDiv = document.querySelector(".counterDiv");
     setCount((Count += 1));
     setBox2Count((Box2Count += 1));
     if (target.classList.contains("Box2") && Box2Count >= 2 && Count >= 2) {
@@ -39,7 +42,8 @@ const Grid = () => {
       setCount((Count = 0));
       console.log("this has been clicked twice");
       GridContainer.style.display = "none";
-      ResetGameContainer.style.display = "flex";
+      ResetGameContainer.style.display = "grid";
+      counterDiv.style.display = "none";
     }
   };
 
@@ -47,6 +51,7 @@ const Grid = () => {
     const target = e.currentTarget;
     const GridContainer = document.querySelector(".GridContainer");
     const ResetGameContainer = document.querySelector(".ResetGameContainer");
+    const counterDiv = document.querySelector(".counterDiv");
     setCount((Count += 1));
     setBox3Count((Box3Count += 1));
     if (target.classList.contains("Box3") && Box3Count >= 2 && Count >= 2) {
@@ -54,7 +59,8 @@ const Grid = () => {
       setCount((Count = 0));
       console.log("this has been clicked twice");
       GridContainer.style.display = "none";
-      ResetGameContainer.style.display = "flex";
+      ResetGameContainer.style.display = "grid";
+      counterDiv.style.display = "none";
     }
   };
 
@@ -62,6 +68,7 @@ const Grid = () => {
     const target = e.currentTarget;
     const GridContainer = document.querySelector(".GridContainer");
     const ResetGameContainer = document.querySelector(".ResetGameContainer");
+    const counterDiv = document.querySelector(".counterDiv");
     setCount((Count += 1));
     setBox4Count((Box4Count += 1));
     if (target.classList.contains("Box4") && Box4Count >= 2 && Count >= 2) {
@@ -69,7 +76,8 @@ const Grid = () => {
       setCount((Count = 0));
       console.log("this has been clicked twice");
       GridContainer.style.display = "none";
-      ResetGameContainer.style.display = "flex";
+      ResetGameContainer.style.display = "grid";
+      counterDiv.style.display = "none";
     }
   };
 
@@ -77,6 +85,7 @@ const Grid = () => {
     const target = e.currentTarget;
     const GridContainer = document.querySelector(".GridContainer");
     const ResetGameContainer = document.querySelector(".ResetGameContainer");
+    const counterDiv = document.querySelector(".counterDiv");
     setCount((Count += 1));
     setBox5Count((Box5Count += 1));
     if (target.classList.contains("Box5") && Box5Count >= 2 && Count >= 2) {
@@ -84,7 +93,8 @@ const Grid = () => {
       setCount((Count = 0));
       console.log("this has been clicked twice");
       GridContainer.style.display = "none";
-      ResetGameContainer.style.display = "flex";
+      ResetGameContainer.style.display = "grid";
+      counterDiv.style.display = "none";
     }
   };
 
@@ -92,6 +102,7 @@ const Grid = () => {
     const target = e.currentTarget;
     const GridContainer = document.querySelector(".GridContainer");
     const ResetGameContainer = document.querySelector(".ResetGameContainer");
+    const counterDiv = document.querySelector(".counterDiv");
     setCount((Count += 1));
     setBox6Count((Box6Count += 1));
     if (target.classList.contains("Box6") && Box6Count >= 2 && Count >= 2) {
@@ -99,7 +110,8 @@ const Grid = () => {
       setCount((Count = 0));
       console.log("this has been clicked twice");
       GridContainer.style.display = "none";
-      ResetGameContainer.style.display = "flex";
+      ResetGameContainer.style.display = "grid";
+      counterDiv.style.display = "none";
     }
   };
 
@@ -107,6 +119,7 @@ const Grid = () => {
     const target = e.currentTarget;
     const GridContainer = document.querySelector(".GridContainer");
     const ResetGameContainer = document.querySelector(".ResetGameContainer");
+    const counterDiv = document.querySelector(".counterDiv");
     setCount((Count += 1));
     setBox7Count((Box7Count += 1));
     if (target.classList.contains("Box7") && Box7Count >= 2 && Count >= 2) {
@@ -114,7 +127,8 @@ const Grid = () => {
       setCount((Count = 0));
       console.log("this has been clicked twice");
       GridContainer.style.display = "none";
-      ResetGameContainer.style.display = "flex";
+      ResetGameContainer.style.display = "grid";
+      counterDiv.style.display = "none";
     }
   };
 
@@ -122,6 +136,7 @@ const Grid = () => {
     const target = e.currentTarget;
     const GridContainer = document.querySelector(".GridContainer");
     const ResetGameContainer = document.querySelector(".ResetGameContainer");
+    const counterDiv = document.querySelector(".counterDiv");
     setCount((Count += 1));
     setBox8Count((Box8Count += 1));
     if (target.classList.contains("Box8") && Box8Count >= 2 && Count >= 2) {
@@ -129,7 +144,8 @@ const Grid = () => {
       setCount((Count = 0));
       console.log("this has been clicked twice");
       GridContainer.style.display = "none";
-      ResetGameContainer.style.display = "flex";
+      ResetGameContainer.style.display = "grid";
+      counterDiv.style.display = "none";
     }
   };
 
@@ -167,34 +183,74 @@ const Grid = () => {
 
   return (
     <div className="Container">
-      <div className="counter">Score: {Count}</div>
+      <div className="counterDiv">Score: {Count}</div>
       <div className="ResetGameContainer" onClick={ResetGame}>
         Score Of Last Round: {BestScore.current}
         <button className="ResetButton">Reset Game?</button>
       </div>
       <div className="GridContainer" onClick={RandomizeBoxOrder}>
-        <div className="Box1" data-value="1" onClick={HandleBox1Click}>
+        <div
+          className="Box1"
+          data-value="1"
+          onClick={HandleBox1Click}
+          style={{ backgroundColor: "red" }}
+        >
           1
         </div>
-        <div className="Box2" data-value="2" onClick={HandleBox2Click}>
+        <div
+          className="Box2"
+          data-value="2"
+          onClick={HandleBox2Click}
+          style={{ backgroundColor: "Orange" }}
+        >
           2
         </div>
-        <div className="Box3" data-value="3" onClick={HandleBox3Click}>
+        <div
+          className="Box3"
+          data-value="3"
+          onClick={HandleBox3Click}
+          style={{ backgroundColor: "olive" }}
+        >
           3
         </div>
-        <div className="Box4" data-value="4" onClick={HandleBox4Click}>
+        <div
+          className="Box4"
+          data-value="4"
+          onClick={HandleBox4Click}
+          style={{ backgroundColor: "Green" }}
+        >
           4
         </div>
-        <div className="Box5" data-value="5" onClick={HandleBox5Click}>
+        <div
+          className="Box5"
+          data-value="5"
+          onClick={HandleBox5Click}
+          style={{ backgroundColor: "Blue" }}
+        >
           5
         </div>
-        <div className="Box6" data-value="6" onClick={HandleBox6Click}>
+        <div
+          className="Box6"
+          data-value="6"
+          onClick={HandleBox6Click}
+          style={{ backgroundColor: "Indigo" }}
+        >
           6
         </div>
-        <div className="Box7" data-value="7" onClick={HandleBox7Click}>
+        <div
+          className="Box7"
+          data-value="7"
+          onClick={HandleBox7Click}
+          style={{ backgroundColor: "violet" }}
+        >
           7
         </div>
-        <div className="Box8" data-value="8" onClick={HandleBox8Click}>
+        <div
+          className="Box8"
+          data-value="8"
+          onClick={HandleBox8Click}
+          style={{ backgroundColor: "teal" }}
+        >
           8
         </div>
       </div>
