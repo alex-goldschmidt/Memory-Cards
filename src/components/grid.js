@@ -23,7 +23,6 @@ const Grid = () => {
     if (target.classList.contains("Box1") && Box1Count >= 2 && Count >= 2) {
       setBox1Count((Box1Count = 0));
       setCount((Count = 0));
-      console.log("this has been clicked twice");
       GridContainer.style.display = "none";
       ResetGameContainer.style.display = "grid";
       counterDiv.style.display = "none";
@@ -40,7 +39,6 @@ const Grid = () => {
     if (target.classList.contains("Box2") && Box2Count >= 2 && Count >= 2) {
       setBox2Count((Box2Count = 0));
       setCount((Count = 0));
-      console.log("this has been clicked twice");
       GridContainer.style.display = "none";
       ResetGameContainer.style.display = "grid";
       counterDiv.style.display = "none";
@@ -57,7 +55,6 @@ const Grid = () => {
     if (target.classList.contains("Box3") && Box3Count >= 2 && Count >= 2) {
       setBox3Count((Box3Count = 0));
       setCount((Count = 0));
-      console.log("this has been clicked twice");
       GridContainer.style.display = "none";
       ResetGameContainer.style.display = "grid";
       counterDiv.style.display = "none";
@@ -74,7 +71,6 @@ const Grid = () => {
     if (target.classList.contains("Box4") && Box4Count >= 2 && Count >= 2) {
       setBox3Count((Box4Count = 0));
       setCount((Count = 0));
-      console.log("this has been clicked twice");
       GridContainer.style.display = "none";
       ResetGameContainer.style.display = "grid";
       counterDiv.style.display = "none";
@@ -91,7 +87,6 @@ const Grid = () => {
     if (target.classList.contains("Box5") && Box5Count >= 2 && Count >= 2) {
       setBox5Count((Box5Count = 0));
       setCount((Count = 0));
-      console.log("this has been clicked twice");
       GridContainer.style.display = "none";
       ResetGameContainer.style.display = "grid";
       counterDiv.style.display = "none";
@@ -108,7 +103,6 @@ const Grid = () => {
     if (target.classList.contains("Box6") && Box6Count >= 2 && Count >= 2) {
       setBox6Count((Box6Count = 0));
       setCount((Count = 0));
-      console.log("this has been clicked twice");
       GridContainer.style.display = "none";
       ResetGameContainer.style.display = "grid";
       counterDiv.style.display = "none";
@@ -125,7 +119,6 @@ const Grid = () => {
     if (target.classList.contains("Box7") && Box7Count >= 2 && Count >= 2) {
       setBox7Count((Box7Count = 0));
       setCount((Count = 0));
-      console.log("this has been clicked twice");
       GridContainer.style.display = "none";
       ResetGameContainer.style.display = "grid";
       counterDiv.style.display = "none";
@@ -142,7 +135,6 @@ const Grid = () => {
     if (target.classList.contains("Box8") && Box8Count >= 2 && Count >= 2) {
       setBox8Count((Box8Count = 0));
       setCount((Count = 0));
-      console.log("this has been clicked twice");
       GridContainer.style.display = "none";
       ResetGameContainer.style.display = "grid";
       counterDiv.style.display = "none";
